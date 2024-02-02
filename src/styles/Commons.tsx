@@ -41,6 +41,11 @@ const Commons = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
     },
+    titulo:{
+        color:"darkblue",
+        fontSize: 20,
+        alignSelf: "center"
+    }
   });
   
   export default Commons;

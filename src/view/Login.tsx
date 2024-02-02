@@ -4,9 +4,13 @@ import Commons from '../styles/Commons';
 import { useState } from 'react';
 import LoginModel from '../model/LoginModel';
 
-export default function Login() {
+export default function Login({ navigation }) {
 
     const [login, setLogin] = useState(new LoginModel());
+
+    function handleLogin() {
+        navigation.navigate('TableShow');
+    }
 
   return (
     <View style={[Commons.secondaryColor, Commons.container,
@@ -34,7 +38,9 @@ export default function Login() {
             />
         </View>
         <View>
-            <Button title="Acceder" />
+            <Button title="Acceder"
+                onPress={() => handleLogin()} 
+            />
         </View>
       
     </View>
